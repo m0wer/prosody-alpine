@@ -1,9 +1,9 @@
-FROM alpine:3.6
+FROM alpine:3.4
 MAINTAINER m0wer <m0wer@autistici.org>
 
 RUN apk update \
 	&& apk upgrade \
-	&& apk add prosody lua-dbi \
+	&& apk add prosody lua-dbi-mysql \
 	&& rm -rf /var/cache/apk/*
 
 COPY mod_* /usr/lib/prosody/modules/
