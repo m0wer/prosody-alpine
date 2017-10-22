@@ -3,7 +3,7 @@ MAINTAINER m0wer <m0wer@autistici.org>
 
 RUN apk update \
 	&& apk upgrade \
-	&& apk add prosody \
+	&& apk add prosody lua-dbi \
 	&& rm -rf /var/cache/apk/*
 
 COPY mod_* /usr/lib/prosody/modules/
