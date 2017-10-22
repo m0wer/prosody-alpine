@@ -44,4 +44,4 @@ Create the certificates:
 
 Run the container:
 
-`docker run -d --rm --name prosody -p 5222:5222 -p 5269:5269 -v `pwd`/localhost.key:/etc/prosody/certs/localhost.key:ro -v `pwd`/localhost.crt:/etc/prosody/certs/localhost.crt:ro m0wer/prosody`
+`docker run -d --rm --name prosody -p 5222:5222 -p 5269:5269 -v `pwd`/localhost.key:/etc/prosody/certs/localhost.key:ro -v `pwd`/localhost.crt:/etc/prosody/certs/localhost.crt:ro -e "LOCAL=test" -e "PASSWORD=test" -e "DOMAIN=localhost" m0wer/prosody`
